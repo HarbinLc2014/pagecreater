@@ -1,27 +1,26 @@
 import React from "react";
 import PageList from './PageList';
+import Login from './Login';
 import Main from './Main';
 import {connect} from 'react-redux';
 
 class App extends React.Component {
-  state = {data:[{ id: 1, title: 'One' }, { id: 2, title: 'Two' }, { id: 3, title: 'Three' }, { id: 4, title: 'Four' }]};
-
-  onClick(){
-    console.log('clicked');
-  }
+  state = {login: true};
 
   render() {
-  //  console.log(this.props.selected);
+    if(this.state.login){
     return (
       <div className="ui grid" style={{ marginTop: 40 }}>
-        <div style={{ marginTop:10 }}>
-          <PageList data={this.state.data}/>
+        <div style={{ width: '25%' }}>
+          <PageList logout={()=>this.setState({login:false})}/>
         </div>
-        <div>
+        <div style={{ width: '75%' }}>
           <Main />
         </div>
       </div>
     );
+  }
+  return <Login login={()=>this.setState({login: true})}/>
   }
 }
 

@@ -2,13 +2,8 @@
   "pages": [
     {
       "id": 1,
-      "title": "some title",
-      "content": "some content"
-    },
-    {
-      "id": 2,
-      "title": "another title",
-      "content": "another content"
+      "title": "Default Title",
+      "content": "Some Text Here...."
     }
   ],
   "comments": [

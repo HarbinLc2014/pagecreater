@@ -6,9 +6,9 @@ export const fetchPageList = () => async dispatch => {
   dispatch({ type: 'FETCH_LIST', payload: response.data });
 }
 
-export const fetchPage = id => async dispatch => {
-  const response = await pages.get('/pages/'+id);
-  dispatch({ type: 'FETCH_PAGE', payload: response.data });
+export const postPage = page => async dispatch => {
+  const response = await pages.post('/pages', page);
+  dispatch({ type: 'POST_PAGE', payload: response.data });
 }
 
 export const selectPage = id => {

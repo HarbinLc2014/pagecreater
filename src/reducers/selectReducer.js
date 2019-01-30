@@ -1,6 +1,6 @@
-export default(state =[], action) => {
+export default(state = 0, action) => {
   switch(action.type) {
-    case 'FETCH_LIST':
+    case 'SELECT_PAGE':
       return action.payload;
     default:
       return state;

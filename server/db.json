@@ -1,9 +1,14 @@
 {
-  "posts": [
+  "pages": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "title": "some title",
+      "content": "some content"
+    },
+    {
+      "id": 2,
+      "title": "another title",
+      "content": "another content"
     }
   ],
   "comments": [

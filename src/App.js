@@ -5,7 +5,7 @@ import Main from './Main';
 import {connect} from 'react-redux';
 
 class App extends React.Component {
-  state = {login: true};
+  state = {login: false};
 
   render() {
     if(this.state.login){

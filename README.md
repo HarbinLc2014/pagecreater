@@ -25,3 +25,8 @@ You can view all the pages including title and content in it through the page by
 You can add pages by clicking the add page button in the side menu.
 
 You can sign out by clicking the log out button in the side menu.
+
+
+### Warning
+
+Make sure to run JSON server first so the port will not be occupied when react.js is making request to server and data can be retrieved successfully.

@@ -1,28 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import PageList from './PageList';
 
-class App extends Component {
+class App extends React.Component {
+  state = {data:[{ id: 1, title: 'One' }, { id: 2, title: 'Two' }, { id: 3, title: 'Three' }, { id: 4, title: 'Four' }]};
+
+  onClick(){
+    console.log('clicked');
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="ui grid" style={{ marginTop: 40 }}>
+        <div style={{ marginTop:10 }}>
+          <PageList data={this.state.data}/>
+        </div>
+        <div>
+          hello
+        </div>
       </div>
     );
   }
 }
+
 
 export default App;
